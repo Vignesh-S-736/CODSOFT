@@ -1,0 +1,47 @@
+#carousel-inner{
+    display: flex;
+    justify-content: center;
+}
+.carousel-item{
+    text-align: center;
+    background-color: #d2d5db;
+    padding: 40px 20px;
+}
+.carousel-item img{
+    max-width: 100%;
+    height: 400px;
+}
+body{
+    text-align: center;
+}
+.list-show button{
+    border: none;
+    padding: 30px;
+    font: 200;
+    font-size: 18px;
+    border-radius: 30px;
+    margin: 30px;
+    height: 240px;
+    width: 190px;
+    background-color:#ecf4ff;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.list-show button:hover{
+    font-size: 20px;
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+}
+.list-show{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.list-show button img{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
