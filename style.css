@@ -14,34 +14,121 @@
 body{
     text-align: center;
 }
-.list-show button{
-    border: none;
-    padding: 30px;
-    font: 200;
-    font-size: 18px;
-    border-radius: 30px;
-    margin: 30px;
-    height: 240px;
-    width: 190px;
-    background-color:#ecf4ff;
-    transition: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-}
-.list-show button:hover{
-    font-size: 20px;
-    transform: translateY(-8px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+.content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    row-gap:7px;
+    max-width:100%;
+    height:170px;
 }
 .list-show{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    max-width:100%;
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(3,270px);
+    grid-template-rows:repeat(2,250px);
+    justify-content:center;
+    row-gap:20px;
+    column-gap:30px;
 }
-.list-show button img{
-    height: 50px;
-    width: 50px;
-    margin: 20px;
+.list-show div:hover{
+    font-size: 20px;
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.list-show div{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    row-gap:20px;
+    align-items:center;
+    width:270px;
+    height:250px;
+    background-color:#ecf4ff;
+    border-radius:15px;
+    transition-property:all;
+    transition-timing-function: linear;
+    transition-duration:0.2s;
+}
+.list-show div .main-pic{
+    width:70px;
+    height:90px;
+}
+
+.list-show div .secondary-pic{
+    width:25px;
+    height:25px;
+}
+.list-your-show-btn button{
+    color:white;
+    padding:10px 50px;
+    background-color:rgb(236, 94, 113);
+    border:none;
+    border-radius:5px;
+    margin-top:50px;
+}
+.list-your-show-btn{
+    padding-bottom:20px;
+}
+.overlay{
+    background-color:#222222CC;
+    /opacity:0.8;/
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1;
+    display:none;
+}
+.popups{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.popups :is(.performance-popup,.Experience-popup,.Expositions-popup,.Parties-popup,.Sports-popup,.Conferences-popup){
+    width:500px;
+    display:flex;
+    flex-direction:column;
+    row-gap:10px;
+    align-items:center;
+    background-color:white;
+    border:1px solid black;
+    padding:20px;
+    position:fixed;
+    top:20px;
+    z-index:4;
+    display:none;
+}
+.popup-main-pic{
+    width:60px;
+    height:90px;
+}
+.main-images-popup img{
+    width:120px;
+    height:180px;
+}
+.popups .close{
+    position:relative;
+    right:-210px;
+    top:0px;
+    width:30px;
+    height:30px;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:640px) {
+    .list-show{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(3,250px);
+
+    }
 }
